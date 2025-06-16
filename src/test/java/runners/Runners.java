@@ -8,7 +8,6 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = {"stepDefinitions","hooks"},
-        tags = "@sauce",
         plugin = {
                 "pretty",                               // Konsola renkli detaylı çıktı
                 "html:target/cucumber-reports.html",   // HTML rapor
