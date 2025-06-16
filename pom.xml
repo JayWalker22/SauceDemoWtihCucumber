@@ -45,15 +45,6 @@
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- TestNG -->
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.9.0</version>
-            <scope>test</scope>
-        </dependency>
-
         <!-- Java Faker -->
         <dependency>
             <groupId>com.github.javafaker</groupId>
