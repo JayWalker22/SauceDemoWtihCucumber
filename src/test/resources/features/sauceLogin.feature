@@ -1,4 +1,4 @@
-
+@sauce
 Feature: User Login Test
   @sauce
   Scenario: Login with valid credentials
