@@ -89,6 +89,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-remote-driver</artifactId>
+            <version>4.21.0</version> <!-- veya projenin uyumlu olduğu en son sürüm -->
         </dependency>
 
         <!-- Logging (Logback Classic) -->
@@ -161,32 +162,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.0.0</version>
                 <configuration>
-                    <parallel>methods</parallel>
-                    <threadCount>8</threadCount>
-                    <perCoreThreadCount>false</perCoreThreadCount>
-                    <forkCount>8</forkCount>
-                    <reuseForks>true</reuseForks>
-                    <argLine>-Duser.language=en -Dfile.encoding=UTF-8</argLine>
-                    <includes>
-                        <include>**/runners/Runners.java</include>
-                    </includes>
-                    <testFailureIgnore>true</testFailureIgnore>
-                </configuration>
-            </plugin>
-
-            <!-- Failsafe Plugin (Paralel testler için, opsiyonel) -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M7</version>
-                <configuration>
-                    <includes>
-                        <include>**/*Test.java</include>
-                        <include>**/*Tests.java</include>
-                        <include>**/*TestRunner.java</include>
-                    </includes>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
                 </configuration>
             </plugin>
 
