@@ -86,6 +86,10 @@
             <artifactId>extentreports-cucumber7-adapter</artifactId>
             <version>1.8.4</version>
         </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-remote-driver</artifactId>
+        </dependency>
 
         <!-- Logging (Logback Classic) -->
         <dependency>
@@ -175,13 +179,13 @@
             <!-- Failsafe Plugin (Paralel testler için, opsiyonel) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-failsafe-plugin</artifactId>
-                <version>3.1.0</version>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M7</version>
                 <configuration>
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <skipTests>false</skipTests>
                     <includes>
-                        <include>**/runners/*Runner*.java</include>
+                        <include>**/*Test.java</include>
+                        <include>**/*Tests.java</include>
+                        <include>**/*TestRunner.java</include>
                     </includes>
                 </configuration>
             </plugin>

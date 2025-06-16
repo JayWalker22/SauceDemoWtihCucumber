@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = {"stepDefinitions","hooks"},
+        tags="@smoke",
         plugin = {
                 "pretty",                               // Konsola renkli detaylı çıktı
                 "html:target/cucumber-reports.html",   // HTML rapor
@@ -18,5 +19,5 @@ import org.junit.runner.RunWith;
         },
         monochrome = true                           // Konsol çıktısını okunabilir yapar
 )
-public class Runners {
+public class TestRunner {
 }
