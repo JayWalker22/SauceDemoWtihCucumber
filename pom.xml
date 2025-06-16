@@ -160,7 +160,7 @@
                     <reuseForks>true</reuseForks>
                     <argLine>-Duser.language=en -Dfile.encoding=UTF-8</argLine>
                     <includes>
-                        <include>**/runners/*Runner*.java</include>
+                        <include>**/runners/Runners.java</include>
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
